@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({super.key});
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,8 +17,20 @@ class Login extends StatelessWidget {
         title: const Text(
           'Login',
           style: TextStyle(
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
+            fontSize: 20,
             color: Colors.white,
+          ),
+        ),
+      ),
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            children: [
+              Image.asset('images/Login/login_photo.png'),
+            ],
           ),
         ),
       ),
